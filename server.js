@@ -13,10 +13,8 @@ app.use(express.json());
 
 // JSONBin configuration
 const JSONBIN_API_URL = 'https://api.jsonbin.io/v3';
-const JSONBIN_BIN_ID = '696c060eae596e708fe35f94';
-const JSONBIN_API_KEY = '$2a$10$wNtf26TFWfeWQ3EJuL6BpOkTJXiWRNl9jZV3Uci/R6Q3mCx.kg52S';
-
-// Password configuration - hash this in production!
+const JSONBIN_API_KEY = process.env.JSONBIN_API_KEY || '$2a$10$wNtf26TFWfeWQ3EJuL6BpOkTJXiWRNl9jZV3Uci/R6Q3mCx.kg52S';
+const JSONBIN_BIN_ID = process.env.JSONBIN_BIN_ID || '696c060eae596e708fe35f94';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'BRENDAN-IS-KING';
 
 // Hash password for verification

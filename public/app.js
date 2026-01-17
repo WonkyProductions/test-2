@@ -1,7 +1,7 @@
 // Store all photos and their associated chats
 const photos = [];
 let currentPhotoIndex = -1;
-const ws = new WebSocket(`ws://${window.location.host}`);
+const ws = new WebSocket(`wss://${window.location.host}`);
 
 /**
  * Compress image to reduce file size
